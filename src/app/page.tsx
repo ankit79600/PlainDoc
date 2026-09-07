@@ -9,7 +9,7 @@ import { Shield, Zap, Lock, CheckCircle } from "lucide-react";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
 
 export const metadata: Metadata = {
-  title: "PlainDoc — Explain Any Legal Document in Plain English",
+  title: { absolute: "PlainDoc — Explain Any Legal Document in Plain English" },
   description:
     "Paste any legal document — rental agreement, medical bill, terms and conditions, employment contract — and get a free plain-English, clause-by-clause explanation in seconds.",
   alternates: { canonical: SITE_URL },
