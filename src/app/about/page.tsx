@@ -7,7 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
 const PAGE_URL = `${SITE_URL}/about`;
 
 export const metadata: Metadata = {
-  title: "About PlainDoc — Our Mission to Make Legal Documents Understandable",
+  title: { absolute: "About PlainDoc — Our Mission to Make Legal Documents Understandable" },
   description:
     "PlainDoc was built to give everyone access to plain-language explanations of legal documents — rental agreements, medical bills, employment contracts, and more. Free, private, instant.",
   alternates: { canonical: PAGE_URL },

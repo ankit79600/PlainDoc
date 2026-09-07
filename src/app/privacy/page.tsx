@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
 const PAGE_URL = `${SITE_URL}/privacy`;
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — PlainDoc",
+  title: { absolute: "Privacy Policy — PlainDoc" },
   description:
     "PlainDoc's privacy policy. We process documents in memory and never store your data. Read exactly how we handle the documents you submit.",
   alternates: { canonical: PAGE_URL },

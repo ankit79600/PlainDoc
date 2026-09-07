@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   const url = `${SITE_URL}/explain/${doc.slug}`;
   return {
-    title: doc.title,
+    title: { absolute: doc.title },
     description: doc.metaDescription,
     keywords: [
       `explain ${doc.name.toLowerCase()}`,
