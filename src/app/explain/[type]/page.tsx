@@ -123,6 +123,41 @@ export default async function DocumentTypePage({
         </div>
       </article>
 
+      {/* ── Common confusing clauses ── */}
+      {doc.confusingClauses && doc.confusingClauses.length > 0 && (
+        <section className="py-12 sm:py-16 px-4 bg-indigo-50 border-y border-indigo-100" aria-labelledby="clauses-heading">
+          <div className="max-w-3xl mx-auto">
+            <h2 id="clauses-heading" className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+              Common Confusing Clauses in a {doc.name} — Explained
+            </h2>
+            <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+              These are the clauses people most often misunderstand or overlook. PlainDoc flags all of them automatically when you explain your document.
+            </p>
+            <dl className="space-y-4">
+              {doc.confusingClauses.map((c, i) => (
+                <div key={i} className="bg-white rounded-xl border border-indigo-200 p-4 sm:p-5">
+                  <dt className="font-bold text-gray-900 mb-1.5 flex items-start gap-2">
+                    <span className="shrink-0 w-5 h-5 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center mt-0.5" aria-hidden="true">
+                      {i + 1}
+                    </span>
+                    {c.clause}
+                  </dt>
+                  <dd className="text-gray-600 text-sm leading-relaxed pl-7">{c.meaning}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-8 text-center">
+              <a
+                href="#explain-tool"
+                className="inline-flex items-center gap-2 bg-indigo-700 text-white font-bold px-6 py-3 rounded-xl hover:bg-indigo-800 transition-colors"
+              >
+                Explain My {doc.name} — Free
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── How to use ── */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50" aria-labelledby="how-to-heading">
         <div className="max-w-3xl mx-auto">
