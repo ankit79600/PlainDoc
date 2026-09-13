@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
   },
 
   // pdf-parse uses Node.js fs — mark it server-only so it's never bundled into the browser
-  serverExternalPackages: ["pdf-parse"],
+  serverExternalPackages: ["unpdf"],
 };
 
 export default nextConfig;
