@@ -166,6 +166,17 @@ Set all environment variables before running.
 
 ---
 
+## Before Going Live — Placeholders to Replace
+
+| What | File(s) | How |
+|---|---|---|
+| **Site domain** | `.env.local` → Vercel env vars | Set `NEXT_PUBLIC_SITE_URL=https://yourdomain.com` |
+| **LLM API key** | `.env.local` → Vercel env vars | Set `LLM_API_KEY=your_anthropic_key` |
+| **Buy Me a Coffee handle** | `src/components/Navigation.tsx`, `src/components/Footer.tsx` | Search for `buymeacoffee.com/PLACEHOLDER` and replace `PLACEHOLDER` with your handle |
+| **Social preview image** | `src/app/opengraph-image.tsx` | Edit the JSX to update colours, text, or domain label. Next.js auto-serves it as `/opengraph-image` |
+| **SEO tags (global)** | `src/app/layout.tsx` | Edit `title`, `description`, `keywords`, and `openGraph`/`twitter` objects |
+| **SEO tags (per page)** | Each `page.tsx` → `generateMetadata` export | Edit the returned `title` and `description` per page |
+
 ## Tech Stack
 
 - **Next.js 16** (App Router, TypeScript, Turbopack)

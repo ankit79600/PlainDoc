@@ -46,21 +46,12 @@ export const metadata: Metadata = {
     title: "PlainDoc — Explain Any Legal Document in Plain English",
     description:
       "Free AI tool that explains legal documents in plain English. Paste your document and get a clause-by-clause explanation in seconds.",
-    images: [
-      {
-        url: `${SITE_URL}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "PlainDoc — Plain English Document Explainer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PlainDoc — Explain Any Legal Document in Plain English",
     description:
       "Free AI tool that explains legal documents in plain English. Understand what you sign.",
-    images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
     index: true,

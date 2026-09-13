@@ -48,6 +48,15 @@ export default function Navigation() {
             <Link href="/about" className="text-gray-600 hover:text-indigo-700 transition-colors">
               About
             </Link>
+            {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
+            <a
+              href="https://www.buymeacoffee.com/PLACEHOLDER"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 text-amber-900 font-semibold px-3 py-2 rounded-lg text-sm transition-colors"
+            >
+              ☕ <span>Support</span>
+            </a>
             <Link
               href="/#explain-tool"
               className="bg-indigo-700 text-white px-4 py-2 rounded-lg hover:bg-indigo-800 transition-colors"
@@ -81,6 +90,15 @@ export default function Navigation() {
                 <Link href="/#explain-tool" className="mt-2 bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm text-center hover:bg-indigo-800 transition-colors">
                   Try Free
                 </Link>
+                {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
+                <a
+                  href="https://www.buymeacoffee.com/PLACEHOLDER"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-amber-900 font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
+                >
+                  ☕ Buy me a coffee
+                </a>
               </nav>
             </div>
           </details>
