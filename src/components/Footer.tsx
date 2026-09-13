@@ -78,7 +78,7 @@ export default function Footer() {
           </p>
           {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
           <a
-            href="https://www.buymeacoffee.com/PLACEHOLDER"
+            href="https://www.buymeacoffee.com/ankitX"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-amber-400 hover:text-amber-300 transition-colors"
