@@ -1,8 +1,10 @@
 // ============================================================
 // LLM Integration — wire up your API key in .env.local:
 //   LLM_API_KEY=your_key_here
-//   LLM_MODEL=claude-sonnet-4-6   (or any model you prefer)
+//   LLM_MODEL=claude-opus-4-8   (optional override)
 // ============================================================
+
+import Anthropic from "@anthropic-ai/sdk";
 
 export type ExplainedClause = {
   title: string;
@@ -20,35 +22,23 @@ export type ExplanationResult = {
   processingNote: string;
 };
 
-// ── STUB IMPLEMENTATION ──────────────────────────────────────
-// Replace the body of callLLM() with a real API call.
-// The function signature and return type must remain the same.
-
 async function callLLM(prompt: string): Promise<string> {
-  // TODO: Replace this stub with your real LLM call.
-  // Example using the Anthropic SDK:
-  //
-  //   import Anthropic from "@anthropic-ai/sdk";
-  //   const client = new Anthropic({ apiKey: process.env.LLM_API_KEY });
-  //   const message = await client.messages.create({
-  //     model: process.env.LLM_MODEL ?? "claude-sonnet-4-6",
-  //     max_tokens: 4096,
-  //     messages: [{ role: "user", content: prompt }],
-  //   });
-  //   return message.content[0].type === "text" ? message.content[0].text : "";
-  //
-  // Example using OpenAI SDK:
-  //
-  //   import OpenAI from "openai";
-  //   const openai = new OpenAI({ apiKey: process.env.LLM_API_KEY });
-  //   const completion = await openai.chat.completions.create({
-  //     model: process.env.LLM_MODEL ?? "gpt-4o",
-  //     messages: [{ role: "user", content: prompt }],
-  //   });
-  //   return completion.choices[0].message.content ?? "";
+  const apiKey = process.env.LLM_API_KEY;
+  if (!apiKey || apiKey === "your_llm_api_key_here") {
+    return JSON.stringify(MOCK_RESPONSE);
+  }
 
-  void prompt; // suppress unused-var warning until wired up
-  return JSON.stringify(MOCK_RESPONSE);
+  const client = new Anthropic({ apiKey });
+  const message = await client.messages.create({
+    model: process.env.LLM_MODEL ?? "claude-opus-4-8",
+    max_tokens: 4096,
+    system:
+      "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
+    messages: [{ role: "user", content: prompt }],
+  });
+
+  const block = message.content[0];
+  return block.type === "text" ? block.text : "";
 }
 
 // ── MAIN EXPORT ──────────────────────────────────────────────
