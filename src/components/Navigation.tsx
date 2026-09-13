@@ -50,7 +50,7 @@ export default function Navigation() {
             </Link>
             {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
             <a
-              href="https://www.buymeacoffee.com/ankitX"
+              href="https://www.buymeacoffee.com/ankitx"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 text-amber-900 font-semibold px-3 py-2 rounded-lg text-sm transition-colors"
@@ -92,7 +92,7 @@ export default function Navigation() {
                 </Link>
                 {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
                 <a
-                  href="https://www.buymeacoffee.com/ankitX"
+                  href="https://www.buymeacoffee.com/ankitx"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-1 flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-amber-900 font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
