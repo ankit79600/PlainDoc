@@ -76,6 +76,15 @@ export default function Footer() {
           <p className="text-xs text-gray-500">
             © {new Date().getFullYear()} PlainDoc. All rights reserved.
           </p>
+          {/* TODO: Replace PLACEHOLDER with your Buy Me a Coffee handle at buymeacoffee.com */}
+          <a
+            href="https://www.buymeacoffee.com/PLACEHOLDER"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            ☕ Buy me a coffee
+          </a>
           <p className="text-xs text-gray-500 text-center sm:text-right">
             PlainDoc explains documents in plain language. This is not legal advice.
             Always consult a licensed attorney for legal questions.
