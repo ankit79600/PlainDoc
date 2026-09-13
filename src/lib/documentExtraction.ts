@@ -13,13 +13,12 @@ export type ExtractionResult = {
 
 export async function extractFromPdf(buffer: Buffer): Promise<ExtractionResult> {
   try {
-    // Dynamic import keeps pdf-parse out of the browser bundle
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const pdfParse = require("pdf-parse") as (buf: Buffer) => Promise<{ text: string; numpages: number }>;
-    const result = await pdfParse(buffer);
+    const { getDocumentProxy, extractText } = await import("unpdf");
+    const pdf = await getDocumentProxy(new Uint8Array(buffer));
+    const { totalPages, text } = await extractText(pdf, { mergePages: true });
     return {
-      text: result.text,
-      pageCount: result.numpages,
+      text: text as string,
+      pageCount: totalPages,
       method: "pdf",
     };
   } catch (err) {
