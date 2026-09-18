@@ -1,10 +1,11 @@
 // ============================================================
 // LLM Integration — wire up your API key in .env.local:
-//   LLM_API_KEY=your_key_here
-//   LLM_MODEL=claude-opus-4-8   (optional override)
+//   LLM_API_KEY=your_gemini_api_key_here
+//   LLM_MODEL=gemini-1.5-flash   (optional override)
+// Get a free key at: https://aistudio.google.com/app/apikey
 // ============================================================
 
-import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export type ExplainedClause = {
   title: string;
@@ -28,17 +29,15 @@ async function callLLM(prompt: string): Promise<string> {
     return JSON.stringify(MOCK_RESPONSE);
   }
 
-  const client = new Anthropic({ apiKey });
-  const message = await client.messages.create({
-    model: process.env.LLM_MODEL ?? "claude-opus-4-8",
-    max_tokens: 4096,
-    system:
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({
+    model: process.env.LLM_MODEL ?? "gemini-1.5-flash",
+    systemInstruction:
       "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
-    messages: [{ role: "user", content: prompt }],
   });
 
-  const block = message.content[0];
-  return block.type === "text" ? block.text : "";
+  const result = await model.generateContent(prompt);
+  return result.response.text();
 }
 
 // ── MAIN EXPORT ──────────────────────────────────────────────
