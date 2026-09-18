@@ -1,11 +1,11 @@
 // ============================================================
 // LLM Integration — wire up your API key in .env.local:
 //   LLM_API_KEY=your_gemini_api_key_here
-//   LLM_MODEL=gemini-1.5-flash   (optional override)
+//   LLM_MODEL=gemini-3.6-flash   (optional override)
 // Get a free key at: https://aistudio.google.com/app/apikey
 // ============================================================
 
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
 export type ExplainedClause = {
   title: string;
@@ -29,15 +29,16 @@ async function callLLM(prompt: string): Promise<string> {
     return JSON.stringify(MOCK_RESPONSE);
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({
-    model: process.env.LLM_MODEL ?? "gemini-1.5-flash",
-    systemInstruction:
-      "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
+  const ai = new GoogleGenAI({ apiKey });
+  const response = await ai.models.generateContent({
+    model: process.env.LLM_MODEL ?? "gemini-3.6-flash",
+    contents: prompt,
+    config: {
+      systemInstruction:
+        "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
+    },
   });
-
-  const result = await model.generateContent(prompt);
-  return result.response.text();
+  return response.text ?? "";
 }
 
 // ── MAIN EXPORT ──────────────────────────────────────────────
