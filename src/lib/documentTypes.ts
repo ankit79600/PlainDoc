@@ -1173,6 +1173,573 @@ export const documentTypes: DocumentType[] = [
     ],
     relatedDocTypes: ["loan-agreement", "insurance-policy", "credit-card-agreement"],
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // 11. MORTGAGE AGREEMENT
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "mortgage-agreement",
+    name: "Mortgage Agreement",
+    emoji: "🏡",
+    h1: "Understand My Mortgage Agreement — Home Loan Terms Explained in Plain English",
+    title: "Understand My Mortgage Agreement | Home Loan Terms in Plain English – PlainDoc",
+    metaDescription:
+      "Paste your mortgage agreement and get a plain-language explanation of interest rate, amortization, escrow, PMI, prepayment penalties, and what happens if you default. Free.",
+    intro: `A mortgage is probably the largest financial commitment you'll ever make — and the agreement that governs it runs 40 to 80 pages of dense legal language. Buried in the fine print are details about how your interest rate can change, when the bank can call the entire loan due, what happens to your escrow account, and what rights you have before foreclosure. PlainDoc's free mortgage agreement explainer breaks down every significant clause so you understand exactly what you're signing before you hand over a 30-year commitment.`,
+    sections: [
+      {
+        heading: "The Two Documents That Make Up Your Mortgage",
+        body: `Most homebuyers don't realize they're signing two separate legal instruments at closing. The promissory note is your personal promise to repay the loan — it specifies the loan amount, interest rate, repayment schedule, and your personal liability for the debt. The mortgage (or deed of trust in many states) is the security instrument that creates the lender's lien on the property — giving the lender the right to foreclose if you default. The note is the debt; the mortgage is the collateral agreement securing that debt. When your loan is sold to another servicer, your payment address changes but the terms don't — both documents remain fully in effect.`,
+      },
+      {
+        heading: "Fixed Rate vs. Adjustable Rate: What Your Agreement Locks In",
+        body: `Fixed-rate mortgages maintain the same interest rate and monthly payment for the entire loan term — typically 15 or 30 years. Adjustable-rate mortgages (ARMs) start with a fixed period (typically 5, 7, or 10 years), then adjust periodically based on a benchmark index. ARM agreements specify the index (SOFR is now common), the margin (a fixed percentage added to the index), the adjustment frequency, the per-adjustment cap, and the lifetime cap. A 5/1 ARM with a 2/6 cap structure means fixed for 5 years, then annual adjustments capped at 2% per adjustment and 6% over the life of the loan. Always calculate your maximum possible payment before taking an ARM.`,
+      },
+      {
+        heading: "Escrow: Why Your Payment Is Higher Than You Expected",
+        body: `Most mortgages require an escrow account — a separate account managed by the lender that collects a portion of your monthly payment to cover property taxes and homeowners insurance when they come due. Your monthly payment is typically PITI: Principal, Interest, Taxes, and Insurance. The tax and insurance portions go into escrow; the lender pays the bills when due. The escrow amount adjusts annually based on actual tax and insurance bills. If your escrow is underfunded — because taxes or insurance increased — the lender may require a lump-sum catch-up payment or increase your monthly payment. PMI, required when your down payment is below 20%, may also be collected through escrow.`,
+      },
+      {
+        heading: "Default, Acceleration, and Foreclosure: Your Rights Before You Lose the Home",
+        body: `Mortgage default typically begins with missed payments. After 30 days, the delinquency is reported to credit bureaus. Most mortgages have an acceleration clause: after a specified period of default (typically 90–120 days), the lender can declare the entire outstanding balance immediately due. Federal law requires lenders to wait until you're 120 days delinquent before initiating foreclosure and to offer loss mitigation options first — loan modifications, repayment plans, forbearance, or a short sale. Foreclosure timelines vary dramatically by state: judicial foreclosure takes 12–36 months in many states; non-judicial foreclosure can happen in as little as 90–120 days in others.`,
+      },
+      {
+        heading: "Due-on-Sale Clause: Why You Can't Transfer a Mortgage",
+        body: `Nearly all modern mortgages contain a due-on-sale clause, which requires the entire loan balance to be paid immediately if the property is sold or transferred. This prevents buyers from assuming a seller's below-market-rate mortgage without lender approval. The clause is triggered by: selling the property, transferring title, placing the property in a trust (with exceptions for living trusts), and in some cases adding a co-owner to the title. FHA and VA loans are often assumable — conventional mortgages almost never are. Transferring title without paying off the mortgage gives the lender the right to accelerate the loan immediately.`,
+      },
+      {
+        heading: "PMI: When It Applies and How to Remove It",
+        body: `PMI (Private Mortgage Insurance) is required by most conventional lenders when your down payment is less than 20%. PMI protects the lender — not you — if you default. It typically costs 0.5–1.5% of the loan amount annually. The Homeowners Protection Act gives you the right to request PMI cancellation when your loan-to-value ratio reaches 80% based on the original purchase price and loan balance. PMI must be automatically terminated when the balance reaches 78% of the original purchase price. If your home's value has increased significantly, you may be able to request a new appraisal to terminate PMI sooner, though lender rules vary.`,
+      },
+    ],
+    confusingClauses: [
+      {
+        clause: "Acceleration Clause",
+        meaning:
+          "After 90–120 days of missed payments, the lender can demand the entire outstanding loan balance immediately. This is the legal mechanism that triggers foreclosure. Federal rules require lenders to wait 120 days before filing and to offer loss mitigation options first.",
+      },
+      {
+        clause: "Due-on-Sale / Alienation Clause",
+        meaning:
+          "If you sell, transfer, or add someone to the title of your home, the full mortgage balance becomes immediately due. You cannot transfer your below-market-rate mortgage to a buyer without lender approval. Living trust transfers are typically exempt.",
+      },
+      {
+        clause: "Escrow Impound Account",
+        meaning:
+          "A portion of your monthly payment funds a lender-managed account that pays property taxes and homeowners insurance. If those costs rise annually, your monthly payment increases. An escrow shortage can result in a one-time catch-up payment.",
+      },
+      {
+        clause: "Negative Amortization",
+        meaning:
+          "Some older payment-option ARMs allowed minimum payments lower than the interest accruing, causing the outstanding balance to grow rather than shrink. Modern mortgages rarely include this, but verify your agreement if your balance seems to be increasing despite regular payments.",
+      },
+      {
+        clause: "Prepayment Penalty",
+        meaning:
+          "Most conventional mortgages have no prepayment penalty, but some non-QM products may charge a fee for paying off early or refinancing. Check this clause before making lump-sum principal payments or refinancing.",
+      },
+      {
+        clause: "Private Mortgage Insurance (PMI)",
+        meaning:
+          "PMI protects the lender, not you. Required when down payment is less than 20%. You can request cancellation at 20% equity based on original purchase price. It's automatically terminated at 22% equity. PMI does not protect you if you default.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a mortgage and a promissory note?",
+        answer:
+          "The promissory note is your personal promise to repay the debt — it creates your personal liability. The mortgage is the security instrument that gives the lender a lien on your property. The note is the debt; the mortgage is the collateral agreement. You sign both at closing. If you default, the lender can pursue you personally on the note and foreclose on the property through the mortgage.",
+      },
+      {
+        question: "What happens if I miss a mortgage payment?",
+        answer:
+          "After 30 days: late fee charged, reported to credit bureaus. After 90–120 days: lender may send a breach letter and begin loss mitigation review. Federal law requires lenders to wait 120 days before filing for foreclosure and to offer loss mitigation options. Contact your servicer immediately if you anticipate missing a payment — options are much easier to access before serious delinquency.",
+      },
+      {
+        question: "What is PMI and when can I remove it?",
+        answer:
+          "PMI is required when your down payment is less than 20%. It protects the lender if you default. You can request cancellation when you reach 20% equity based on the original purchase price. PMI must be automatically terminated at 78% of the original price. If your home has appreciated significantly, ask your lender about appraisal-based cancellation.",
+      },
+      {
+        question: "Can I assume a seller's mortgage?",
+        answer:
+          "Generally no for conventional loans — the due-on-sale clause makes the full balance due upon transfer. FHA and VA loans are often assumable. If you transfer title without paying off a conventional mortgage, the lender can accelerate the full balance immediately.",
+      },
+      {
+        question: "What is an escrow account and why is my payment higher than expected?",
+        answer:
+          "Your monthly payment includes 1/12th of your annual property taxes and homeowners insurance, held in escrow. When taxes or insurance increase — which they often do — your monthly payment increases. You'll receive an annual escrow analysis statement explaining any payment changes.",
+      },
+    ],
+    howToSteps: [
+      "Locate your mortgage closing documents — the promissory note and the mortgage or deed of trust.",
+      "Upload the PDF or paste the text into PlainDoc on this page.",
+      "Select 'Mortgage Agreement' as the document type.",
+      "Click 'Explain My Document'.",
+      "Review the interest rate type (fixed or ARM), escrow requirements, and default/foreclosure provisions.",
+      "Note your PMI termination rights and mark when you'll reach 20% equity.",
+      "Keep copies of both documents in a secure location for the life of the loan.",
+    ],
+    relatedGlossaryTerms: [
+      "escrow",
+      "lien",
+      "prepayment-penalty",
+      "amortization",
+      "grace-period",
+      "interest-rate-apr",
+    ],
+    relatedDocTypes: ["loan-agreement", "insurance-policy", "car-loan-emi"],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 12. SEVERANCE AGREEMENT
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "severance-agreement",
+    name: "Severance Agreement",
+    emoji: "📋",
+    h1: "Understand My Severance Agreement — What You're Signing Away and Getting",
+    title: "Understand My Severance Agreement | Severance Package Explainer – PlainDoc",
+    metaDescription:
+      "Paste your severance agreement and get a plain-language explanation of claims releases, ADEA rights, non-disparagement, non-compete, and what to negotiate. Free severance explainer.",
+    intro: `A severance agreement arrives at the worst possible time — you've just lost your job, you're stressed, and someone is handing you a document with a signing deadline. But what looks like a straightforward offer of money in exchange for a signature is actually a legally binding contract that can permanently waive your right to sue your former employer for discrimination, wrongful termination, or other legal violations. Before you sign, you need to understand exactly what claims you're releasing, what restrictions you're accepting, and whether the offer is fair. PlainDoc's free severance agreement explainer breaks it all down in plain English.`,
+    sections: [
+      {
+        heading: "What a Severance Agreement Actually Is",
+        body: `A severance agreement is a contract in which you waive legal claims against your employer in exchange for compensation above what you're legally owed. The key phrase is "above what you're legally owed" — most employers have no legal obligation to offer severance unless your employment contract or company policy says otherwise. When they do offer it, they're paying you to sign away rights. The core of any severance agreement is the release of claims — a broad legal waiver in which you give up the right to sue for anything arising out of your employment or termination. This is the most consequential part of the document, and it's rarely the first thing you see.`,
+      },
+      {
+        heading: "The Release of Claims: What You're Giving Up",
+        body: `By signing the release, you typically waive all claims related to your employment — including potential discrimination claims (age, race, gender, disability, national origin), wrongful termination claims, breach of contract claims, wage and hour violations, retaliation claims, and claims under Title VII, the ADA, and the FMLA. The language is typically sweeping: "known and unknown claims arising from the beginning of time to the date of this agreement." This means you're waiving claims you may not even know you have. Take the release seriously — consider whether any wrongful conduct occurred before signing it away permanently.`,
+      },
+      {
+        heading: "ADEA Rights: Special Protections for Workers Over 40",
+        body: `If you are 40 or older, the Older Workers Benefit Protection Act (OWBPA) gives you specific rights that cannot be waived without compliance with strict requirements. You must be given at least 21 days to consider the agreement (45 days in a group layoff). You have 7 days after signing to revoke. The agreement must specifically mention ADEA claims by name. You must be advised in writing to consult an attorney. If your severance agreement doesn't comply with OWBPA requirements and you're over 40, the ADEA waiver may not be enforceable — though the rest of the agreement may still be.`,
+      },
+      {
+        heading: "Non-Disparagement, Confidentiality, and Cooperation Clauses",
+        body: `Beyond the release, severance agreements typically include three additional restrictions. A non-disparagement clause prohibits negative public statements about the company, its leadership, or products — potentially forever. A confidentiality clause keeps the agreement terms (especially the payment amount) and the circumstances of your departure private. A cooperation clause requires you to assist with future litigation or regulatory investigations involving the company, potentially requiring your time and involvement long after you've moved on. Whether these clauses are mutual — restricting both you and the company — is worth scrutinizing. A company that won't include mutual non-disparagement may be planning to characterize your departure negatively.`,
+      },
+      {
+        heading: "Non-Compete and Non-Solicitation: Check If They Appear Here",
+        body: `Some severance agreements include non-compete or non-solicitation clauses as conditions of receiving payment — separate from any in your original employment contract. By signing, you may be accepting new post-employment restrictions you didn't have before. Courts scrutinize non-competes in severance agreements more carefully than those in employment contracts because the power imbalance at termination is particularly severe. If a non-compete appears in your severance agreement and wasn't in your original contract, it's worth negotiating to remove or narrow it before signing.`,
+      },
+      {
+        heading: "Negotiating a Severance Agreement",
+        body: `Severance offers are almost always negotiable. Leverage comes from the value of what you're signing away — the broader your potential legal claims, the more valuable your release is to the employer. Items worth negotiating: total payment amount (one to two weeks per year of service is common but not required); extension of health insurance coverage; continuation of equity vesting; a neutral reference policy; removal or narrowing of non-compete provisions; and additional time to review beyond the minimum. If you experienced discrimination or harassment, the value of your release is higher — consulting an employment attorney before signing can significantly increase your settlement.`,
+      },
+    ],
+    confusingClauses: [
+      {
+        clause: "General Release of All Claims",
+        meaning:
+          "By signing, you permanently waive your right to sue for anything arising from your employment — including discrimination, wrongful termination, and wage claims — even claims you don't know about yet. Understand what claims you might have before signing them away.",
+      },
+      {
+        clause: "Known and Unknown Claims",
+        meaning:
+          "You're waiving rights to claims you haven't discovered yet, in addition to known claims. Some states (including California) require specific acknowledgment language for unknown claims releases. This is a reason to review the agreement with an attorney before signing.",
+      },
+      {
+        clause: "21-Day / 45-Day Consideration Period (ADEA)",
+        meaning:
+          "If you're 40 or older, federal law gives you at least 21 days to consider the agreement (45 days in a group layoff). You cannot be pressured to sign faster. Signing before the period expires is your choice.",
+      },
+      {
+        clause: "7-Day Revocation Period",
+        meaning:
+          "Workers over 40 have 7 days after signing to revoke an ADEA waiver. The agreement isn't final until this period expires. Payments typically begin after the revocation period ends, not on the signature date.",
+      },
+      {
+        clause: "Non-Disparagement Clause",
+        meaning:
+          "You agree not to make negative public statements about the company indefinitely. Check whether this is mutual. A one-sided clause that restricts you but not the company means they can characterize your departure however they wish while you're legally silenced.",
+      },
+      {
+        clause: "Cooperation Clause",
+        meaning:
+          "You agree to assist with future litigation or investigations even after leaving — potentially indefinitely. Negotiate to limit the scope, require reasonable advance notice, and ensure compensation for significant time commitments.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do I have to sign a severance agreement?",
+        answer:
+          "No. Severance agreements are voluntary. Your employer is offering money in exchange for a legal waiver — you can decline. If you decline, you don't receive the payment (unless your employment contract guarantees severance), but you retain all legal rights including the right to sue. The decision should be based on whether the offered amount is fair compensation for the claims you're releasing.",
+      },
+      {
+        question: "How long do I have to decide whether to sign?",
+        answer:
+          "If you're 40 or older, federal law gives you at least 21 days (45 days in a group layoff) and 7 days to revoke after signing. If you're under 40, there's no federally mandated period, but a few days to a week is typical. You can always ask for additional review time — a reasonable employer should accommodate a request for 5–7 business days.",
+      },
+      {
+        question: "What claims am I giving up when I sign?",
+        answer:
+          "Typically all claims from your employment — discrimination, wrongful termination, retaliation, breach of contract, and wage violations through the signing date. Before signing, consider whether you experienced any discrimination, harassment, or wage violations, because you're permanently waiving those claims.",
+      },
+      {
+        question: "Is severance pay taxable?",
+        answer:
+          "Yes. Severance is treated as ordinary income and is subject to federal and state income tax, Social Security, and Medicare taxes. Employers are required to withhold taxes. If you're also receiving payments attributed to physical injury or attorney's fees from an embedded legal settlement, different tax treatment may apply.",
+      },
+      {
+        question: "Can I collect unemployment if I sign a severance agreement?",
+        answer:
+          "In most states, yes — severance generally doesn't disqualify you from unemployment benefits, though some states treat certain severance as wages that delay eligibility. A severance agreement cannot require you to waive unemployment rights, which are established by state law and are non-waivable.",
+      },
+    ],
+    howToSteps: [
+      "Obtain the full text of the severance agreement — do not sign anything at the termination meeting.",
+      "Paste or upload it into PlainDoc on this page.",
+      "Select 'Severance Agreement' as the document type.",
+      "Click 'Explain My Document'.",
+      "Review the release of claims, non-disparagement, confidentiality, and any non-compete provisions.",
+      "Consider consulting an employment attorney — many offer free consultations and can increase your settlement.",
+      "Use the full consideration period; do not let the employer pressure you to sign faster.",
+    ],
+    relatedGlossaryTerms: [
+      "non-compete-clause",
+      "arbitration-clause",
+      "termination-clause",
+      "indemnity",
+      "liquidated-damages",
+      "governing-law",
+    ],
+    relatedDocTypes: ["employment-contract", "nda", "terms-and-conditions"],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 13. FREELANCE CONTRACT / SERVICE AGREEMENT
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "freelance-contract",
+    name: "Freelance Contract / Service Agreement",
+    emoji: "💻",
+    h1: "Explain My Freelance Contract and Service Agreement in Plain English",
+    title: "Explain My Freelance Contract | Service Agreement in Plain English – PlainDoc",
+    metaDescription:
+      "Paste your freelance contract or service agreement and get a plain-language explanation of payment terms, IP ownership, kill fees, revision limits, and liability caps. Free.",
+    intro: `Whether you're a freelancer reviewing a client's contract or a business onboarding a contractor, service agreements determine who owns the work, when payment is due, what happens if the project is cancelled, and who's liable if something goes wrong. Too many freelancers sign client contracts without understanding the IP assignment clauses that transfer all creative work to the client indefinitely, or the limitation of liability provisions that cap the contractor's exposure at amounts that don't reflect the risk. PlainDoc's free freelance contract explainer breaks down every clause so you know exactly what you're agreeing to before the project starts.`,
+    sections: [
+      {
+        heading: "Scope of Work: The Foundation of Every Service Agreement",
+        body: `The scope of work (SOW) is the most important section of any service agreement — and the most frequently disputed. It defines exactly what services will be delivered, the specifications for each deliverable, the timeline, and what's excluded. Vague scope language is the root cause of most freelance disputes: "design a website" means different things to different people. A well-drafted SOW specifies the exact deliverables (how many pages, what formats, which features), the number of revision rounds included, what constitutes a revision vs. a new request, approval procedures, and what happens when scope changes are requested mid-project. If the SOW in the contract you're reviewing is vague, request specificity before signing — oral understandings won't override the written contract.`,
+      },
+      {
+        heading: "Payment Terms: When You Get Paid and What Happens If You Don't",
+        body: `Payment terms should specify the total amount, the payment schedule (deposit, milestone payments, final payment on delivery), the payment method, the invoice cycle (net-15, net-30, net-60), and what happens when a client pays late. Key provisions: late payment interest (many freelance contracts include 1.5–2% monthly on overdue invoices); the right to pause work until payment is received; a kill fee if the client terminates before completion; and a dispute resolution process for contested invoices. From the client's perspective, ensure milestone payments are tied to specific, measurable deliverables — not vague phase completions — so there's no ambiguity about when each payment obligation is triggered.`,
+      },
+      {
+        heading: "Intellectual Property: Who Owns the Work?",
+        body: `IP ownership is where freelance contracts get most consequential and most misunderstood. Under U.S. copyright law, creative work is owned by its creator at the moment of creation — unless a written contract says otherwise. Client contracts typically contain one of three arrangements: work for hire (all work is owned by the client from creation), assignment (ownership transfers to the client upon final payment), or license (the freelancer retains ownership but grants the client a right to use the work in specified ways). "Work for hire" clauses are extremely common in client-provided contracts and transfer not just the final deliverable but also any underlying tools or frameworks you developed — which can affect your ability to reuse your own methods on future projects.`,
+      },
+      {
+        heading: "Revision Limits and Change Orders: Protecting Your Time",
+        body: `Scope creep — the gradual expansion of project requirements without additional compensation — is one of the most common problems in freelance work. Service agreements should specify the number of revision rounds included in the base price; how additional revisions are priced; the change order process for scope additions (written, signed, separate from the original agreement); and a deadline for client feedback to prevent projects from being indefinitely open without payment. From the client's perspective, clear revision limits protect budget predictability. From the freelancer's perspective, they protect against unlimited rework. Review whether "revision" is defined — some clients interpret one round as unlimited changes within that round.`,
+      },
+      {
+        heading: "Kill Fee and Cancellation: What Happens If the Project Dies",
+        body: `A kill fee is the amount the client owes the freelancer if they terminate before completion. Kill fees are typically structured as a percentage of remaining contract value or a flat fee. A common structure: 25% kill fee if cancelled in the first 25% of the project, 50% in the middle, and 100% if deliverables are complete but the client doesn't proceed. Without a kill fee clause, a freelancer who has completed 80% of the work may receive nothing if the client cancels. If you're a freelancer and the contract doesn't include a kill fee, add one — it's a standard provision.`,
+      },
+      {
+        heading: "Limitation of Liability: How Much You Can Be Sued For",
+        body: `Limitation of liability clauses cap how much one party can recover from the other if something goes wrong. Client-provided contracts typically cap the contractor's liability at the amount paid under the contract. Watch for asymmetric clauses that cap only the contractor's exposure. Also review: indemnification clauses requiring the freelancer to cover the client's legal costs if a third party sues over the work (e.g., copyright infringement claims); and consequential damages waivers preventing recovery of lost profits even if the breach caused significant financial harm. Understand your maximum financial exposure from both directions before signing.`,
+      },
+    ],
+    confusingClauses: [
+      {
+        clause: "Work Made for Hire",
+        meaning:
+          "All work created under this agreement is owned by the client from the moment of creation — including any tools, code, or processes you develop. You have no right to reuse it, display it in your portfolio, or build upon it without the client's permission. Your creative output belongs entirely to the client.",
+      },
+      {
+        clause: "Kill Fee / Cancellation Clause",
+        meaning:
+          "The amount owed to the contractor if the client cancels before completion. Without this clause, if the client cancels mid-project, the contractor may have no contractual right to compensation for completed work. Always include a kill fee clause if you're the contractor.",
+      },
+      {
+        clause: "Net-30 / Net-60 Payment Terms",
+        meaning:
+          "Payment is due 30 or 60 days after the invoice date — not on delivery. Net-60 on a $10,000 project means waiting two months after completing the work to be paid. Understand your cash flow implications and negotiate shorter terms if needed.",
+      },
+      {
+        clause: "Portfolio and Attribution Rights",
+        meaning:
+          "Specifies whether you can display the work in your portfolio or credit yourself publicly. Some clients require confidentiality about the engagement. If public attribution matters to you, confirm the clause permits it before signing.",
+      },
+      {
+        clause: "Indemnification for Third-Party Claims",
+        meaning:
+          "Requires you to defend and pay the client's legal costs if a third party sues because of your work — for example, a copyright infringement claim in a design you created. This can create liability far exceeding your contract value. Verify whether your professional liability insurance covers this.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who owns the work I create as a freelancer?",
+        answer:
+          "By default under U.S. copyright law, you do — the creator owns the work. But if the contract includes a 'work for hire' or IP assignment clause, ownership transfers to the client. Most client contracts include one of these. Review the IP section carefully. If you want to retain rights to use the work in your portfolio or reuse underlying tools, negotiate specific carve-outs before signing.",
+      },
+      {
+        question: "What is a kill fee and should I require one?",
+        answer:
+          "A kill fee is compensation paid when a client cancels before project completion. Yes — if you're a freelancer, require one. It protects you from completing significant work and receiving nothing because a client changes direction. A common structure: 25% of remaining value if cancelled early, 50% at midpoint, 100% if deliverables are complete. Kill fees are standard and a reasonable client will accept them.",
+      },
+      {
+        question: "What does 'net-30' mean in a service agreement?",
+        answer:
+          "Payment is due 30 days after the invoice date. Net-15 means 15 days; net-60 means 60 days. For a $5,000 project on net-60 terms, you wait 60 days after invoicing — potentially 2–3 months after delivery. Short net terms (net-15 or net-30) are preferable. Many freelancers now require a 25–50% deposit upfront to reduce cash flow risk.",
+      },
+      {
+        question: "Can I put the work in my portfolio if I signed a work-for-hire agreement?",
+        answer:
+          "Only if the contract specifically allows it. Under work for hire, the client owns the work and controls its use. Many clients permit portfolio display; some in sensitive industries prohibit it. Before signing, confirm whether you have portfolio rights. If the contract is silent, ask for explicit written permission.",
+      },
+      {
+        question: "What is the contractor's liability if the project causes the client a financial loss?",
+        answer:
+          "Typically limited by the limitation of liability clause to the amount paid under the contract. A well-drafted freelance contract caps your liability at the contract value and disclaims consequential damages. Without this cap, a contractor delivering flawed software could theoretically be liable for the client's entire business loss.",
+      },
+    ],
+    howToSteps: [
+      "Obtain the full text of the freelance contract or service agreement.",
+      "Paste or upload it into PlainDoc on this page.",
+      "Select 'Freelance Contract / Service Agreement' as the document type.",
+      "Click 'Explain My Document'.",
+      "Review the IP ownership clause, payment terms, kill fee provision, and liability cap.",
+      "Note any non-solicitation or non-compete provisions that restrict future work.",
+      "If you're the freelancer, ensure a kill fee clause exists before the project begins.",
+    ],
+    relatedGlossaryTerms: [
+      "indemnity",
+      "termination-clause",
+      "arbitration-clause",
+      "liquidated-damages",
+      "governing-law",
+      "liability-waiver",
+    ],
+    relatedDocTypes: ["employment-contract", "nda", "terms-and-conditions"],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 14. POWER OF ATTORNEY
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "power-of-attorney",
+    name: "Power of Attorney",
+    emoji: "⚖️",
+    h1: "What Is a Power of Attorney? Understand Your POA Document in Plain English",
+    title: "What Is Power of Attorney? POA Document Explained in Plain English – PlainDoc",
+    metaDescription:
+      "Paste your power of attorney and get a plain-language explanation of the agent's powers, limitations, when it takes effect, and how to revoke it. Free POA explainer.",
+    intro: `A power of attorney (POA) is one of the most powerful legal documents you can sign — it authorizes another person to make decisions on your behalf, potentially including control over your finances, property, and healthcare. Yet many people sign POAs prepared by family members or downloaded from the internet without fully understanding what authority they're granting, what limitations exist, or how to revoke the document if circumstances change. PlainDoc's free power of attorney explainer breaks down the types of POA, what each clause actually grants, and what safeguards should be in place to prevent abuse.`,
+    sections: [
+      {
+        heading: "The Different Types of Power of Attorney",
+        body: `Not all powers of attorney are the same. A general POA grants broad authority over financial and legal decisions but automatically becomes invalid if you become mentally incapacitated — exactly when it's needed most. A durable POA contains specific statutory language making it remain effective even upon incapacity — this is the standard for estate planning. A limited (or special) POA grants authority for a specific transaction or time period. A springing POA only takes effect upon a triggering event, typically incapacitation certified by one or two physicians. A healthcare POA (or healthcare proxy) specifically authorizes medical decisions — often combined with a living will in a document called an advance directive. Knowing which type you're signing determines what authority you're granting and when.`,
+      },
+      {
+        heading: "What an Agent Can (and Cannot) Do",
+        body: `The powers granted to your agent depend entirely on what the POA document says. Broad financial POAs typically authorize: managing bank accounts, paying bills, buying and selling real estate, managing investments, filing taxes, operating a business, and making gifts. Key limits to watch for: some POAs explicitly exclude authority to make gifts (especially to the agent themselves), change beneficiary designations on life insurance or retirement accounts, or amend estate planning documents. An agent who makes gifts to themselves without explicit authorization may be committing financial elder abuse — a prosecutable offense. The POA should be explicit about what the agent cannot do, not just what they can.`,
+      },
+      {
+        heading: "Durability: The Most Important Word in Your POA",
+        body: `The most critical distinction in any POA is whether it is "durable." A standard non-durable POA terminates automatically if you become incapacitated. A durable POA contains specific language required by state statute stating the document remains effective despite subsequent incapacity. For estate planning, virtually all financial and healthcare POAs should be durable. The durability language is typically a single sentence, but without it, a POA may be useless in a medical crisis because the agent loses authority precisely when it's needed. Many POAs prepared outside of professional legal guidance omit this language — verify it's present.`,
+      },
+      {
+        heading: "When It Takes Effect and How to Revoke It",
+        body: `Most financial POAs take effect immediately upon signing — the agent can act from that day forward. A springing POA requires written certification of incapacity from one or more physicians before it activates. Knowing when a POA takes effect matters: an immediately effective POA creates real, exercisable authority from the moment of signing. To revoke a POA, you must be mentally competent and deliver written notice of revocation to the agent and to any institutions relying on it (banks, brokerages, healthcare providers). Simply telling the agent you've changed your mind is not sufficient. Filing a revocation with the county recorder may be required if the POA was used for real estate transactions.`,
+      },
+      {
+        heading: "Safeguards Against Abuse",
+        body: `Financial exploitation through abuse of a POA is one of the most common forms of elder financial abuse. Legitimate POAs include safeguards: a requirement for the agent to keep the principal's funds separate from their own; a duty to maintain detailed transaction records; explicit prohibition on self-dealing without specific authorization; co-agent requirements that force two agents to agree before major transactions; and periodic accounting to a third party. A POA that grants unlimited authority with no oversight or accountability requirements creates significant risk. Review the safeguard provisions as carefully as the grant of authority provisions.`,
+      },
+      {
+        heading: "Healthcare POA vs. Living Will",
+        body: `A healthcare POA authorizes someone to make medical decisions on your behalf if you're unable to communicate. A living will documents your specific healthcare preferences — what treatments you do or don't want. Both are important and complementary: the healthcare POA names who decides; the living will tells them what you want. Many states have combined advance directive documents covering both. Without a healthcare POA, family members may disagree about your care with no legal authority to resolve it — and medical providers may be unable to act without a court-appointed guardian. Both documents, properly executed under your state's requirements, provide the clearest protection.`,
+      },
+    ],
+    confusingClauses: [
+      {
+        clause: "Durable Power of Attorney",
+        meaning:
+          "Contains specific statutory language stating the POA remains effective even if you become incapacitated. Without durability language, the POA terminates exactly when it's needed most. Look for: 'This power of attorney shall not be affected by subsequent disability, incapacity, or incompetence of the principal.'",
+      },
+      {
+        clause: "Springing Power of Attorney",
+        meaning:
+          "Only takes effect upon a specified event — typically written physician certification of incapacity. This prevents the agent from acting prematurely, but creates practical delays in emergencies. Ensure your agent knows where the document is and how to activate it.",
+      },
+      {
+        clause: "Gift Authority",
+        meaning:
+          "Explicitly grants or restricts the agent's ability to make gifts, including gifts to themselves. Without clear gift authority, an agent making gifts may be acting outside the POA's scope. An agent making unauthorized gifts to themselves may be committing financial elder abuse.",
+      },
+      {
+        clause: "Co-Agent or Successor Agent",
+        meaning:
+          "Names a backup agent if the primary agent is unable to serve, or requires two agents to agree on major decisions. Co-agent requirements add oversight; successor agents provide continuity. Consider naming a successor for any POA that may need to be exercised over a long period.",
+      },
+      {
+        clause: "Accounting and Record-Keeping",
+        meaning:
+          "Requires the agent to maintain detailed records of all transactions made under the POA. This creates accountability essential for tax and estate purposes. A POA without accounting requirements gives the agent no obligation to document how your assets were managed.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a durable and a regular power of attorney?",
+        answer:
+          "A regular POA terminates if the principal becomes incapacitated. A durable POA remains in effect — this is essential for estate planning and elder care. For any POA intended to cover incapacity scenarios, it must be durable. Look for the specific statutory language confirming durability in your state.",
+      },
+      {
+        question: "Can my agent use my money for themselves?",
+        answer:
+          "Only if the POA explicitly authorizes it. An agent has a fiduciary duty to act in the principal's best interests. An agent who transfers assets to themselves without authorization may be liable for breach of fiduciary duty and financial elder abuse, both of which are civilly and criminally actionable.",
+      },
+      {
+        question: "How do I revoke a power of attorney?",
+        answer:
+          "You must be mentally competent to revoke. Deliver written notice to the agent and to any third parties relying on the POA. Verbal revocation alone is not sufficient. If the POA was recorded for real estate, a revocation should also be recorded with the same county recorder. A new POA that expressly revokes all previous POAs also serves as revocation.",
+      },
+      {
+        question: "What happens if I become incapacitated without a POA?",
+        answer:
+          "A court must appoint a guardian or conservator to manage your affairs — an expensive, slow process that may not result in the person you would have chosen. Family members cannot simply step in without legal authority. A durable financial POA and healthcare POA together avoid court-supervised guardianship in most circumstances.",
+      },
+      {
+        question: "Does a power of attorney expire?",
+        answer:
+          "A durable POA remains effective until you die, revoke it, or a court invalidates it. A limited POA may specify an expiration date. The agent's authority terminates automatically upon the principal's death — at that point, the estate executor takes over and the POA has no further legal effect.",
+      },
+    ],
+    howToSteps: [
+      "Obtain the full text of the power of attorney document.",
+      "Paste or upload it into PlainDoc on this page.",
+      "Select 'Power of Attorney' as the document type.",
+      "Click 'Explain My Document'.",
+      "Confirm whether the POA is durable and what it specifically covers.",
+      "Review the scope of the agent's authority — especially gift authority and self-dealing provisions.",
+      "For significant POAs, have an estate planning attorney confirm proper execution under your state's requirements.",
+    ],
+    relatedGlossaryTerms: [
+      "termination-clause",
+      "governing-law",
+      "indemnity",
+      "force-majeure",
+    ],
+    relatedDocTypes: ["loan-agreement", "insurance-policy", "rental-agreement"],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 15. STUDENT LOAN AGREEMENT
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "student-loan-agreement",
+    name: "Student Loan Agreement",
+    emoji: "🎓",
+    h1: "Understand My Student Loan Agreement — Promissory Note and Repayment Terms Explained",
+    title: "Understand My Student Loan Agreement | Student Loan Terms in Plain English – PlainDoc",
+    metaDescription:
+      "Paste your student loan promissory note and get a plain-language explanation of interest capitalization, repayment plans, deferment, forbearance, and forgiveness options. Free.",
+    intro: `Most students sign their federal student loan promissory note online in minutes, committing to tens of thousands of dollars in debt without reading a word. The terms governing that debt — how interest capitalizes, what repayment options are available, how deferment and forbearance affect your balance, and what happens if you default — have enormous long-term consequences. Whether you have federal loans, private loans, or both, PlainDoc's free student loan explainer breaks down your promissory note in plain English so you can make informed decisions about repayment, forgiveness eligibility, and refinancing.`,
+    sections: [
+      {
+        heading: "Federal vs. Private Student Loans: Fundamentally Different Contracts",
+        body: `The distinction between federal and private student loans is the most important thing to understand. Federal loans (Direct Subsidized, Direct Unsubsidized, PLUS, and Grad PLUS) come with statutory rights private loans don't offer: income-driven repayment (IDR) plans that cap payments as a percentage of income, Public Service Loan Forgiveness (PSLF), deferment and forbearance rights, and the ability to consolidate into federal programs. Private student loans are governed by individual lender contracts and generally offer none of these protections — they behave more like personal loans. Before doing anything with student loans — especially refinancing — determine whether you have federal loans, private loans, or both.`,
+      },
+      {
+        heading: "Interest Rates, Subsidies, and How Your Balance Grows",
+        body: `Federal loan interest rates are set by Congress each academic year and fixed for the life of the loan. Subsidized loans have a key benefit: the government pays your interest while you're enrolled at least half-time, during the grace period, and during deferment. Unsubsidized loans accrue interest from disbursement — even while you're in school. Private loan rates may be fixed or variable; variable rates can increase significantly over a long repayment period. Interest capitalization is critical: when accrued interest is added to your principal balance (which occurs when you enter repayment, switch plans, or exit deferment), you then pay interest on the new, larger balance — accelerating the total cost of the debt.`,
+      },
+      {
+        heading: "Repayment Plans: Your Options and Trade-offs",
+        body: `Federal loans offer multiple plans. The Standard 10-Year Plan has fixed payments and minimizes total interest. Graduated plans start lower and increase every two years. Extended plans stretch payments up to 25 years. Income-Driven Repayment (IDR) plans — including SAVE, PAYE, IBR, and ICR — cap monthly payments at 5–20% of discretionary income and forgive remaining balances after 20–25 years. For borrowers in public service, IDR combined with PSLF results in forgiveness after 10 years of qualifying payments. The trade-off: lower monthly payments often result in negative amortization (balance growing before payments exceed interest), and forgiven balances under IDR may be taxable income (PSLF forgiveness is currently tax-free).`,
+      },
+      {
+        heading: "Deferment and Forbearance: Pausing Payments Without Default",
+        body: `Deferment allows temporary payment suspension without penalty — and for subsidized loans, interest doesn't accrue during deferment. Forbearance also pauses payments, but interest continues to accrue on all loans including subsidized ones. After COVID-19 administrative forbearance, many borrowers found their balances had grown significantly from capitalized interest when repayment resumed. Always use deferment over forbearance when you qualify. Both protect your credit and prevent default, but only deferment protects subsidized borrowers from interest growth. For private loans, deferment and forbearance terms are set by the individual lender and are generally far less favorable.`,
+      },
+      {
+        heading: "Default and Its Consequences",
+        body: `Federal loan default occurs after 270 days of non-payment. Consequences are severe: the entire outstanding balance becomes immediately due; the default is reported to credit bureaus; the Department of Education can seize federal tax refunds, garnish wages without a court order (up to 15% of disposable income), and offset Social Security benefits. You become ineligible for additional federal financial aid. Private loan default terms vary by lender but typically occur after 90–180 days; private lenders must sue to garnish wages. If you're struggling, contact your servicer before defaulting — IDR plans can reduce federal payments to $0 if income is low enough.`,
+      },
+      {
+        heading: "Loan Forgiveness Programs: What Actually Qualifies",
+        body: `PSLF forgives the remaining balance after 120 qualifying monthly payments while working full-time for a qualifying employer (government or nonprofit), under a qualifying IDR plan, on Direct Loans. IDR forgiveness forgives remaining balances after 20–25 years of payments, regardless of employer. Teacher Loan Forgiveness provides up to $17,500 for teachers in low-income schools after 5 years. Private loans are ineligible for all federal forgiveness programs — this is a critical reason not to refinance federal loans into a private loan. Refinancing permanently converts federal loans to private, forfeiting all forgiveness eligibility. That conversion is irreversible.`,
+      },
+    ],
+    confusingClauses: [
+      {
+        clause: "Interest Capitalization",
+        meaning:
+          "When unpaid interest is added to your principal, it becomes part of the base amount on which future interest is calculated — compounding your debt. It occurs when you exit deferment, enter repayment, switch plans, or after forbearance ends. A $15,000 interest balance capitalized onto $50,000 creates a $65,000 base for future interest calculation.",
+      },
+      {
+        clause: "Subsidized vs. Unsubsidized",
+        meaning:
+          "Subsidized: the government pays your interest while enrolled half-time, during grace period, and eligible deferment. Unsubsidized: interest accrues from disbursement — you owe it even while in school. If you don't pay unsubsidized interest while in school, it capitalizes when you enter repayment.",
+      },
+      {
+        clause: "Income-Driven Repayment (IDR)",
+        meaning:
+          "Caps your monthly payment as a percentage of discretionary income. Payments can be $0 if income is low enough. $0 payments still count toward IDR and PSLF forgiveness timelines. Balances can grow despite payments if they don't cover monthly interest accrual.",
+      },
+      {
+        clause: "PSLF Qualifying Payment",
+        meaning:
+          "To count toward PSLF, each payment must be: on time, the full required amount, under a qualifying plan (IDR), on a qualifying loan type (Direct Loan), while working full-time for a qualifying employer. Missing any condition means the payment doesn't count. Track annually using the PSLF Employment Certification Form.",
+      },
+      {
+        clause: "Forbearance vs. Deferment",
+        meaning:
+          "Both pause payments, but during forbearance, interest accrues on all loans — including subsidized — and capitalizes when forbearance ends. During deferment, the government pays interest on subsidized loans. Always request deferment first if you qualify.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between federal and private student loans?",
+        answer:
+          "Federal loans offer statutory protections: IDR plans, deferment rights, forgiveness programs, and default resolution options. Private loans are contractual products with lender-specific terms and generally none of these protections. Never refinance federal loans into private unless you have stable high income, no interest in forgiveness programs, and a meaningfully lower rate — refinancing is irreversible.",
+      },
+      {
+        question: "What is interest capitalization and how does it affect my balance?",
+        answer:
+          "Capitalization is when accumulated unpaid interest is added to your principal. Future interest then accrues on the larger balance. It happens when you exit deferment, enter repayment, change plans, or after forbearance ends. To limit capitalization, make interest payments during in-school periods or deferment if your budget allows.",
+      },
+      {
+        question: "Can my student loan payments be $0 per month?",
+        answer:
+          "Yes, on IDR plans, if your income is at or below a threshold (150–225% of the federal poverty line depending on the plan), your calculated payment is $0. $0 payments count toward IDR and PSLF forgiveness timelines. You must recertify income annually — failure to recertify can cause payments to jump to the full standard amount.",
+      },
+      {
+        question: "What happens if I default on a federal student loan?",
+        answer:
+          "After 270 days without payment: entire balance due immediately; tax refunds seized; wages garnished up to 15% without a court order; default reported to credit bureaus; ineligibility for additional federal aid. The Fresh Start program and loan rehabilitation can resolve default, but the damage is significant. Contact your servicer before defaulting — IDR plans can prevent it entirely.",
+      },
+      {
+        question: "Should I refinance my student loans?",
+        answer:
+          "For private loans, refinancing for a lower rate is often smart. For federal loans, refinancing permanently converts them to private and forfeits IDR, PSLF, deferment, and all federal protections. If you're in public service, work for a nonprofit, or anticipate lower income periods, refinancing federal loans is rarely the right choice. Model your projected forgiveness before deciding.",
+      },
+    ],
+    howToSteps: [
+      "Obtain your student loan promissory note from your servicer or studentaid.gov.",
+      "Paste or upload it into PlainDoc on this page.",
+      "Select 'Student Loan Agreement' as the document type.",
+      "Click 'Explain My Document'.",
+      "Determine whether your loans are federal or private, the interest rate type, and available repayment options.",
+      "Check whether you qualify for IDR, PSLF, or other forgiveness programs before considering refinancing.",
+      "Log in to studentaid.gov to see all your federal loans and your PSLF qualifying payment count.",
+    ],
+    relatedGlossaryTerms: [
+      "interest-rate-apr",
+      "grace-period",
+      "prepayment-penalty",
+      "late-payment-penalty",
+      "auto-renewal-clause",
+    ],
+    relatedDocTypes: ["loan-agreement", "credit-card-agreement", "employment-contract"],
+  },
 ];
 
 export function getDocumentType(slug: string): DocumentType | undefined {

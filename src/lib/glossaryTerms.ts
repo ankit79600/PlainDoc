@@ -362,6 +362,184 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["lien", "indemnity", "late-payment-penalty", "termination-clause"],
     relatedDocTypes: ["rental-agreement"],
   },
+
+  // ── LEGAL (continued) ─────────────────────────────────────────
+  {
+    slug: "severability-clause",
+    term: "Severability Clause",
+    category: "legal",
+    shortDefinition: "A provision stating that if one part of a contract is found unenforceable, the rest of the contract remains in effect.",
+    title: "What Is a Severability Clause? Plain English Contract Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'severability clause' mean in a contract? Plain-language explanation with examples. Understand how severability protects the rest of your agreement if one clause fails.",
+    definition:
+      "A severability clause (also called a savings clause or separability clause) states that if any provision of the contract is found to be illegal, invalid, or unenforceable by a court, that provision will be severed from the agreement — but the remainder of the contract will continue in full force and effect. Without a severability clause, a court finding one provision unenforceable could potentially invalidate the entire contract. Severability clauses appear in virtually every commercial contract, terms of service, employment agreement, and software license.",
+    plainEnglish:
+      "A severability clause is essentially an insurance policy for the rest of the contract. It says: 'If a court decides that one part of this agreement is illegal or unenforceable, that part gets removed — but everything else stays in effect.' This is important because contracts sometimes include clauses that turn out to violate local law (a non-compete that's unenforceable in a particular state, or a limitation of liability that contradicts consumer protection law). Without severability language, a court striking one provision might void the whole agreement. With it, only the offending clause is removed. You'll see this in nearly every contract you sign — it's usually near the end in the 'miscellaneous' or 'general provisions' section.",
+    example:
+      "A software company's terms of service include a mandatory arbitration clause that a California court finds unenforceable under state law. Because the ToS contains a severability clause, the court strikes only the arbitration provision. The remaining terms — data usage rights, subscription terms, cancellation policy, IP license — remain fully in effect. Without the severability clause, the entire ToS could have been challenged as invalid.",
+    relatedTerms: ["governing-law", "termination-clause", "entire-agreement-clause", "arbitration-clause"],
+    relatedDocTypes: ["terms-and-conditions", "employment-contract", "nda", "freelance-contract"],
+  },
+  {
+    slug: "entire-agreement-clause",
+    term: "Entire Agreement Clause",
+    category: "legal",
+    shortDefinition: "A clause stating that the written contract is the complete, final agreement between the parties, superseding all prior discussions and representations.",
+    title: "What Is an Entire Agreement Clause? Plain English Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'entire agreement' or 'integration clause' mean in a contract? Plain-language explanation with examples. Understand why verbal promises don't override what's written.",
+    definition:
+      "An entire agreement clause (also called an integration clause, merger clause, or complete agreement clause) states that the written contract constitutes the entire agreement between the parties on the subject matter — and that all prior negotiations, representations, oral promises, emails, and preliminary agreements are superseded by and merged into the final written document. It prevents either party from later claiming that verbal commitments or representations made during negotiations are enforceable obligations, even if those representations influenced the decision to sign.",
+    plainEnglish:
+      "An entire agreement clause means the written contract is the only thing that counts. Whatever a salesperson promised you verbally, whatever was discussed in emails before signing, whatever was represented in negotiations — none of it is enforceable unless it made it into the final written agreement. This clause is why 'get it in writing' is such important advice. If a landlord promises verbally that pets are allowed, or an employer promises a bonus verbally, or a software vendor promises features not in the contract — and the agreement has an entire agreement clause — those promises are legally meaningless. The only commitments that matter are the ones written into and signed as part of the final document.",
+    example:
+      "During salary negotiations, a hiring manager tells Michael that he'll receive a $10,000 annual bonus. Michael accepts the job offer. The employment contract he signs contains an entire agreement clause and makes no mention of a bonus. When year-end arrives and Michael's bonus isn't paid, he's told the verbal promise isn't binding. Because of the entire agreement clause, the written contract supersedes the oral representation. Michael's only recourse would be to prove fraud — a much harder legal standard. This is exactly why verbal employment promises must be confirmed in writing before signing.",
+    relatedTerms: ["severability-clause", "governing-law", "termination-clause", "arbitration-clause"],
+    relatedDocTypes: ["employment-contract", "nda", "terms-and-conditions", "freelance-contract", "rental-agreement"],
+  },
+  {
+    slug: "warranty-disclaimer",
+    term: "Warranty Disclaimer",
+    category: "legal",
+    shortDefinition: "A clause that explicitly excludes warranties — promises about the quality, fitness, or performance of a product or service.",
+    title: "What Is a Warranty Disclaimer? Plain English Contract Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'warranty disclaimer' or 'as-is' mean in a contract? Plain-language explanation with examples. Know what guarantees you're giving up when you agree to a disclaimer.",
+    definition:
+      "A warranty disclaimer is a contractual clause in which the seller or provider explicitly excludes warranties — legally enforceable promises about the condition, quality, fitness, or performance of a product or service. Warranties can be express (explicitly stated) or implied (automatically created by law). The most common implied warranties are the implied warranty of merchantability (the product works for its ordinary purpose) and the implied warranty of fitness for a particular purpose (the product is suitable for the specific use the buyer communicated to the seller). Under the Uniform Commercial Code (UCC) and consumer protection laws, sellers can disclaim implied warranties only under specific conditions — and some consumer warranties cannot be disclaimed at all.",
+    plainEnglish:
+      "A warranty disclaimer is the contract's way of saying: 'We're not promising this works, and if it doesn't, you can't sue us over it.' You see this in software licenses ('provided as-is, with no warranty of any kind'), in real estate ('sold as-is, no representations made'), and in consumer electronics. 'As-is' and 'with all faults' are common signaling phrases. The disclaimer is trying to eliminate both express warranties (specific promises made in marketing or sales) and implied warranties (legal minimums that apply automatically). Whether a disclaimer is enforceable depends on the jurisdiction, whether it was conspicuous (often required to be in caps or bold), whether the buyer is a consumer or a business, and whether it covers consumer products subject to federal warranty law (the Magnuson-Moss Act in the U.S. limits warranty disclaimers on consumer goods).",
+    example:
+      "Rachel buys accounting software for her business. The license agreement contains an all-caps warranty disclaimer stating the software is provided 'AS-IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.' Three months in, the software has a bug that corrupts her financial records. The warranty disclaimer is the vendor's defense against Rachel's claim that the software was unfit for its purpose. Whether it holds depends on her jurisdiction's consumer protection rules and whether the disclaimer was sufficiently conspicuous.",
+    relatedTerms: ["liability-waiver", "indemnity", "governing-law", "entire-agreement-clause"],
+    relatedDocTypes: ["terms-and-conditions", "freelance-contract", "employment-contract"],
+  },
+
+  // ── FINANCIAL (continued) ────────────────────────────────────
+  {
+    slug: "escrow",
+    term: "Escrow",
+    category: "financial",
+    shortDefinition: "A neutral third-party arrangement where money or documents are held until specific conditions are met.",
+    title: "What Is Escrow? Plain English Real Estate and Finance Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'escrow' mean in real estate and mortgages? Plain-language explanation with examples. Understand how escrow accounts work and when your money is held.",
+    definition:
+      "Escrow is a legal arrangement in which a third party (the escrow agent) holds money, assets, or documents on behalf of two other parties until specified conditions are met and the transaction is complete. In real estate, escrow describes two distinct concepts: the closing escrow (where the buyer's earnest money and closing funds are held by a title company or escrow company until all conditions of sale are met and the transaction closes) and the mortgage escrow account (an account managed by the mortgage servicer that collects monthly amounts to pay property taxes and homeowners insurance when they come due).",
+    plainEnglish:
+      "Escrow is a neutral holding arrangement — money sits with a third party until everything is in order, then it gets distributed. In home-buying, when you make an offer and put down earnest money, that money goes into escrow with the title company. It doesn't go to the seller yet — it sits safely until closing. On your mortgage, escrow means a portion of your monthly payment goes into a separate account that your lender uses to pay your property taxes and insurance bills on your behalf. You don't have to remember to pay those bills — the lender does it automatically from the escrow account. If your taxes or insurance increase, your lender adjusts your monthly payment to keep the escrow account properly funded. An escrow shortage means you owe a catch-up payment.",
+    example:
+      "James and his wife are buying a home. They make an offer with $10,000 in earnest money deposited into escrow with the title company. During the 30-day closing period, inspections are completed, financing is confirmed, and title is cleared. At closing, the $10,000 is credited toward the purchase price and the remaining funds are disbursed to the seller. Going forward, 1/12th of their annual property tax and homeowners insurance premium is included in each monthly mortgage payment and held in escrow — the lender pays the bills directly when they come due each year.",
+    relatedTerms: ["lien", "grace-period", "prepayment-penalty", "interest-rate-apr"],
+    relatedDocTypes: ["mortgage-agreement", "loan-agreement", "rental-agreement"],
+  },
+  {
+    slug: "co-signer",
+    term: "Co-signer",
+    category: "financial",
+    shortDefinition: "A person who signs a loan or credit agreement alongside the primary borrower, taking on equal legal responsibility for the debt.",
+    title: "What Is a Co-signer? Plain English Loan Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'co-signer' mean on a loan? Plain-language explanation with examples. Understand the full financial and legal risk of co-signing before you agree.",
+    definition:
+      "A co-signer (also called a co-borrower or guarantor, depending on the specific arrangement) is a person who signs a credit agreement alongside the primary borrower and becomes equally and fully responsible for repaying the debt if the primary borrower fails to pay. Co-signers are typically required when the primary applicant has insufficient credit history, a low credit score, or insufficient income to qualify for the loan on their own. The co-signer's credit, income, and assets are evaluated as part of the approval decision, and the co-signer's credit report reflects the loan — including any missed payments or default.",
+    plainEnglish:
+      "Co-signing a loan means you're agreeing to pay it if the other person doesn't. This is not a formality — it is a full, legal obligation that attaches to your credit and your finances as if the loan were entirely yours. If the primary borrower misses a payment, the lender can come directly to you for the full amount. If they default, your credit score drops along with theirs. The lender doesn't have to pursue the primary borrower first; they can pursue either party simultaneously. Co-signing for a family member or friend is a generous act, but it's also a significant financial risk. Co-signers are often released from their obligation only if the primary borrower refinances the loan in their own name — which requires qualifying independently.",
+    example:
+      "David's daughter is starting college and needs a private student loan, but she has no credit history and no income. David co-signs the loan. Six months later, she drops out and stops making payments. The lender immediately contacts David for the full balance. Because David co-signed, his credit score drops sharply, his debt-to-income ratio rises (affecting his ability to get a mortgage), and the lender can sue him for the full outstanding balance. David's only option is to pay the loan and then seek reimbursement from his daughter separately — a difficult family situation that financial advisors commonly cite as a reason to avoid co-signing.",
+    relatedTerms: ["lien", "indemnity", "interest-rate-apr", "grace-period"],
+    relatedDocTypes: ["loan-agreement", "car-loan-emi", "credit-card-agreement", "student-loan-agreement"],
+  },
+  {
+    slug: "amortization",
+    term: "Amortization",
+    category: "financial",
+    shortDefinition: "The process of paying off a loan through scheduled payments that cover both principal and interest, with the interest portion decreasing over time.",
+    title: "What Is Amortization? Plain English Loan Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'amortization' mean on a loan or mortgage? Plain-language explanation with an amortization schedule example. Understand how your payments break down between interest and principal.",
+    definition:
+      "Amortization is the gradual repayment of a loan through a series of scheduled payments over a defined term. Each payment covers both interest and principal. In a fully amortizing loan, the payments are structured so that the outstanding balance reaches exactly zero at the end of the term — if you make every scheduled payment, the loan is fully paid off. The amortization schedule is a table showing, for each payment, exactly how much goes to interest, how much reduces principal, and the remaining balance after each payment. In the early years of a long loan, payments are primarily interest; as the principal shrinks, a larger proportion of each payment reduces the principal.",
+    plainEnglish:
+      "Amortization is how your loan gets paid off over time through regular payments. Each monthly payment you make covers two things: the interest that accrued since your last payment, and a portion of the actual money you borrowed (the principal). In the early years of a 30-year mortgage, most of each payment is interest — you might be paying $1,500/month but only $200 of it reduces what you owe. By the final years of the loan, the ratio flips — most of each payment is principal because the balance is small and there's little interest to cover. This front-loading of interest is by design. It means that if you sell or refinance early, you've built up relatively little equity — you've been mostly paying interest, not principal. Looking at a full amortization schedule shows the true cost of a long-term loan.",
+    example:
+      "Maria takes out a $300,000 mortgage at 7% interest for 30 years. Her monthly payment is $1,996. In month 1: $1,750 goes to interest (7% of $300,000 ÷ 12) and $246 reduces the principal to $299,754. In month 12: $1,742 is interest and $254 is principal. By year 15 (midpoint): roughly $1,400 is interest and $596 is principal. By year 29: most of the payment is principal and very little is interest. Over the full 30 years, Maria pays $718,560 total — $418,560 of which is interest. An amortization table reveals this total before she commits.",
+    relatedTerms: ["prepayment-penalty", "interest-rate-apr", "grace-period", "lien"],
+    relatedDocTypes: ["mortgage-agreement", "loan-agreement", "car-loan-emi"],
+  },
+
+  // ── MEDICAL (continued) ────────────────────────────────────
+  {
+    slug: "prior-authorization",
+    term: "Prior Authorization",
+    category: "medical",
+    shortDefinition: "A requirement that your doctor get approval from your insurance company before providing certain treatments, medications, or procedures.",
+    title: "What Is Prior Authorization? Plain English Health Insurance Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'prior authorization' mean in health insurance? Plain-language explanation with examples. Understand why insurers require pre-approval and what happens if you skip it.",
+    definition:
+      "Prior authorization (also called pre-authorization, pre-certification, or prior approval) is a requirement by a health insurance plan that a healthcare provider obtain advance approval from the insurer before delivering a specific service, medication, procedure, or referral to a specialist. The insurer reviews the request to determine whether the treatment meets its criteria for medical necessity before agreeing to cover it. Without prior authorization when it's required, the insurer may deny the claim entirely — leaving the patient responsible for the full cost regardless of the medical need.",
+    plainEnglish:
+      "Prior authorization is your insurer's permission slip system. Before your doctor can prescribe certain expensive drugs, perform certain procedures, or refer you to a specialist, they have to ask your insurance company for permission first — proving the treatment is 'medically necessary' by the insurer's criteria. If they don't get approval, or if the insurer says no, the treatment may not be covered at all. This is one of the most frustrating parts of the U.S. health insurance system. Approval can take days to weeks; in urgent situations, the delay can affect care. If your insurer denies prior authorization, you have the right to appeal. As of 2024, new federal rules require insurers to process urgent prior authorization requests within 72 hours and non-urgent requests within 7 days.",
+    example:
+      "Tom's doctor prescribes a brand-name medication for his condition. The medication requires prior authorization from Tom's insurer. The doctor's office submits the prior authorization request with supporting medical records. The insurer reviews the request and determines the medication is medically necessary — approval granted. Tom's prescription is covered at his plan's formulary cost-sharing. If the insurer had denied it, the doctor would need to either appeal with additional documentation, prescribe an alternative the insurer does cover, or Tom would pay out-of-pocket. Many denied prior authorizations are approved on first appeal.",
+    relatedTerms: ["deductible", "copay", "out-of-pocket-maximum", "subrogation"],
+    relatedDocTypes: ["insurance-policy", "medical-bill"],
+  },
+  {
+    slug: "in-network-out-of-network",
+    term: "In-Network vs. Out-of-Network",
+    category: "medical",
+    shortDefinition: "Whether a healthcare provider has a contracted rate with your insurance — in-network providers cost you less; out-of-network can be significantly more expensive.",
+    title: "What Is In-Network vs. Out-of-Network? Plain English Health Insurance Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'in-network' and 'out-of-network' mean in health insurance? Simple explanation with examples. Know how network status affects your costs before you get care.",
+    definition:
+      "In-network refers to healthcare providers (doctors, hospitals, labs, specialists) who have signed a contract with your insurance company agreeing to accept a negotiated, discounted rate for covered services. Out-of-network refers to providers who have no contract with your insurer, meaning your insurer has not agreed on a rate — and the provider may bill you the full, non-discounted amount. In-network care is subject to your plan's standard cost-sharing (deductible, copay, co-insurance). Out-of-network care may have a separate, higher deductible, higher co-insurance, or no coverage at all depending on your plan type.",
+    plainEnglish:
+      "In-network means your insurance has a deal with that doctor or hospital — they've agreed on prices, so your costs are predictable and lower. Out-of-network means no deal exists, so costs can be much higher and sometimes not covered at all. HMO plans typically cover only in-network care (with narrow exceptions for emergencies). PPO plans cover both, but out-of-network coverage costs significantly more. The real danger is invisible out-of-network providers: you go to an in-network hospital, but the anesthesiologist or radiologist who treats you is out-of-network — and you only find out when you receive a large bill weeks later. The No Surprises Act (effective 2022) restricts unexpected out-of-network bills for emergency care and for non-emergency care at in-network facilities when you weren't given adequate notice.",
+    example:
+      "Linda has a PPO health plan and needs knee surgery. She confirms that her surgeon and the hospital are both in-network. What she doesn't know is that the surgical assistant brought in for her case is out-of-network. After surgery, Linda receives a $4,200 bill from the assistant — an out-of-network provider she had no ability to choose. Under the No Surprises Act, if the surgery was at an in-network facility and Linda didn't receive proper advance notice about the out-of-network provider, this bill may be capped at her in-network cost-sharing amount. Linda can file a dispute with her insurer.",
+    relatedTerms: ["deductible", "copay", "out-of-pocket-maximum", "prior-authorization"],
+    relatedDocTypes: ["insurance-policy", "medical-bill"],
+  },
+
+  // ── RENTAL (continued) ────────────────────────────────────
+  {
+    slug: "subletting",
+    term: "Subletting",
+    category: "rental",
+    shortDefinition: "Renting your leased space (or part of it) to another person while your original lease remains in effect.",
+    title: "What Is Subletting? Plain English Rental and Lease Definition – PlainDoc Glossary",
+    metaDescription:
+      "What does 'subletting' mean in a lease? Plain-language explanation with examples. Understand your rights and risks before you sublet your apartment or office.",
+    definition:
+      "Subletting (also called subleasing) occurs when a tenant who has an existing lease agreement rents all or part of the leased premises to a third party (the subtenant or sublessee) for a period within the original lease term. The original tenant remains a party to the primary lease and retains legal liability to the original landlord — including for rent payment and property condition — even while the subtenant is in possession. Most residential and commercial leases require the landlord's prior written consent before subletting. Subletting without required permission is typically a material breach of the lease that can lead to eviction.",
+    plainEnglish:
+      "Subletting means you're renting your apartment or office to someone else while you're still on the lease. You stay responsible to your landlord — if your subtenant doesn't pay, you still owe the rent. If they damage the place, you're liable. Most leases require you to get the landlord's written permission first. Subletting without permission is a lease violation that can get you evicted. Common reasons people sublet: traveling for an extended period, needing to break a lease without paying the early termination fee, or renting a spare room to help cover rent. The key distinction between subletting and lease assignment is that subletting keeps you on the hook; assignment transfers your obligations to the new tenant entirely (which requires landlord approval and is less commonly permitted).",
+    example:
+      "Priya has 8 months left on her apartment lease when she accepts a temporary work assignment abroad. She finds a subtenant, gets written approval from her landlord, and sublets the apartment for 6 months. The sublease spells out the rent, the rules (no additional subletting, pets allowed per original lease, etc.), and the end date. Two months in, the subtenant stops paying rent. Priya's landlord doesn't pursue the subtenant — they bill Priya directly, because Priya is still the named party on the original lease. Priya must pay the rent and then seek reimbursement from the subtenant through small claims court.",
+    relatedTerms: ["security-deposit", "termination-clause", "auto-renewal-clause", "indemnity"],
+    relatedDocTypes: ["rental-agreement"],
+  },
+  {
+    slug: "normal-wear-and-tear",
+    term: "Normal Wear and Tear",
+    category: "rental",
+    shortDefinition: "The expected, unavoidable deterioration of a rental property from ordinary everyday use — which landlords cannot charge tenants for.",
+    title: "What Is Normal Wear and Tear in a Rental? Plain English Definition – PlainDoc Glossary",
+    metaDescription:
+      "What counts as 'normal wear and tear' in a rental? Plain-language explanation with examples. Know what landlords can and cannot deduct from your security deposit.",
+    definition:
+      "Normal wear and tear refers to the gradual, unavoidable deterioration that results from ordinary, reasonable use of a rental property over time — as opposed to damage caused by negligence, misuse, accidents, or abuse. Under the laws of virtually every U.S. state, landlords are prohibited from deducting the cost of repairing or replacing items that have deteriorated solely through normal wear and tear from a tenant's security deposit. The distinction between normal wear and tear and tenant damage is one of the most frequently disputed issues in landlord-tenant law.",
+    plainEnglish:
+      "Normal wear and tear is the natural aging that happens to any space from regular, careful use. You lived there for a year or two — the carpet got some wear from walking, the walls got minor scuffs from furniture, the paint faded a little. That's wear and tear, and your landlord cannot charge you for it. What your landlord can charge you for: holes in walls, large stains from spills, broken fixtures, burns, damage from pets, or anything that goes beyond what's expected from ordinary use. The test is: would this have happened even if a careful, reasonable person had lived there? If yes, it's wear and tear. If it happened because of something you did that a careful person wouldn't have done, it's damage. Many landlords try to deduct for wear and tear — knowing the difference lets you dispute those charges.",
+    example:
+      "After two years of tenancy, Marcus moves out of his apartment. The landlord deducts from his $2,400 security deposit: $400 for repainting (walls have normal scuffs and slight discoloration from two years of occupancy), $300 for carpet cleaning (light traffic wear on carpet, no stains), and $600 for replacing a light fixture Marcus accidentally broke. The first two deductions — repainting for normal scuffs and carpet cleaning for regular use wear — are almost certainly improper wear and tear deductions in most states. The $600 for the broken fixture is legitimate tenant damage. Marcus can dispute the first $700 in deductions by sending a written demand letter citing his state's security deposit law.",
+    relatedTerms: ["security-deposit", "lien", "late-payment-penalty", "termination-clause"],
+    relatedDocTypes: ["rental-agreement"],
+  },
 ];
 
 export function getGlossaryTerm(slug: string): GlossaryTerm | undefined {
