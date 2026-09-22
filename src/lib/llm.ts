@@ -30,7 +30,7 @@ async function callLLM(prompt: string): Promise<string> {
   }
 
   const ai = new GoogleGenAI({ apiKey });
-  const maxAttempts = 3;
+  const maxAttempts = 4;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
@@ -44,15 +44,16 @@ async function callLLM(prompt: string): Promise<string> {
       });
       return response.text ?? "";
     } catch (err: unknown) {
+      // Stringify the whole error so we catch codes nested anywhere in the SDK error object
+      const errStr = JSON.stringify(err) + (err instanceof Error ? err.message : "");
       const isTransient =
-        err instanceof Error &&
-        (err.message.includes("503") || err.message.includes("UNAVAILABLE") ||
-         err.message.includes("429") || err.message.includes("RESOURCE_EXHAUSTED"));
+        errStr.includes("503") || errStr.includes("UNAVAILABLE") ||
+        errStr.includes("429") || errStr.includes("RESOURCE_EXHAUSTED");
 
       if (!isTransient || attempt === maxAttempts) throw err;
 
-      // Wait 2^attempt seconds (2s, 4s) before retrying
-      await new Promise((res) => setTimeout(res, 2 ** attempt * 1000));
+      // Wait 3s, 6s, 12s before retrying
+      await new Promise((res) => setTimeout(res, 3000 * attempt));
     }
   }
 
