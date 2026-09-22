@@ -31,7 +31,7 @@ async function callLLM(prompt: string): Promise<string> {
 
   const ai = new GoogleGenAI({ apiKey });
   const response = await ai.models.generateContent({
-    model: process.env.LLM_MODEL ?? "gemini-3.6-flash",
+    model: process.env.LLM_MODEL ?? "gemini-2.0-flash",
     contents: prompt,
     config: {
       systemInstruction:
