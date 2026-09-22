@@ -30,15 +30,33 @@ async function callLLM(prompt: string): Promise<string> {
   }
 
   const ai = new GoogleGenAI({ apiKey });
-  const response = await ai.models.generateContent({
-    model: process.env.LLM_MODEL ?? "gemini-3.6-flash",
-    contents: prompt,
-    config: {
-      systemInstruction:
-        "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
-    },
-  });
-  return response.text ?? "";
+  const maxAttempts = 3;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await ai.models.generateContent({
+        model: process.env.LLM_MODEL ?? "gemini-3.6-flash",
+        contents: prompt,
+        config: {
+          systemInstruction:
+            "You are a plain-language legal document explainer. Respond with valid JSON only — no markdown, no code fences, no prose outside the JSON object.",
+        },
+      });
+      return response.text ?? "";
+    } catch (err: unknown) {
+      const isTransient =
+        err instanceof Error &&
+        (err.message.includes("503") || err.message.includes("UNAVAILABLE") ||
+         err.message.includes("429") || err.message.includes("RESOURCE_EXHAUSTED"));
+
+      if (!isTransient || attempt === maxAttempts) throw err;
+
+      // Wait 2^attempt seconds (2s, 4s) before retrying
+      await new Promise((res) => setTimeout(res, 2 ** attempt * 1000));
+    }
+  }
+
+  throw new Error("Unreachable");
 }
 
 // ── MAIN EXPORT ──────────────────────────────────────────────
