@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Scaffolding artefact — not part of the app build:
+    "temp-init/**",
   ]),
 ]);
 

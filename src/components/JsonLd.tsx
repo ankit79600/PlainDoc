@@ -93,3 +93,42 @@ export function buildBreadcrumbSchema(
     })),
   };
 }
+
+export function buildOrganizationSchema(siteUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "PlainDoc",
+    url: siteUrl,
+    description:
+      "Free AI-powered tool for explaining legal documents — rental agreements, medical bills, employment contracts, terms and conditions, and more — in plain English.",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/opengraph-image`,
+    },
+  };
+}
+
+export function buildDefinedTermSchema(
+  term: {
+    term: string;
+    slug: string;
+    definition: string;
+    shortDefinition: string;
+  },
+  pageUrl: string,
+  siteUrl: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: term.term,
+    description: term.definition,
+    url: pageUrl,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: "PlainDoc Legal Glossary",
+      url: `${siteUrl}/glossary`,
+    },
+  };
+}

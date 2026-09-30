@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ExplainTool from "@/components/ExplainTool";
-import JsonLd, { buildWebApplicationSchema, buildFaqSchema, buildHowToSchema } from "@/components/JsonLd";
+import JsonLd, { buildWebApplicationSchema, buildFaqSchema, buildHowToSchema, buildOrganizationSchema } from "@/components/JsonLd";
 import { documentTypes } from "@/lib/documentTypes";
 import { glossaryTerms } from "@/lib/glossaryTerms";
 import { Shield, Zap, Lock, CheckCircle } from "lucide-react";
@@ -58,6 +58,7 @@ export default function HomePage() {
       <JsonLd
         schema={[
           buildWebApplicationSchema(SITE_URL),
+          buildOrganizationSchema(SITE_URL),
           buildFaqSchema(homeFaqs),
           buildHowToSchema(
             "How to explain a legal document with PlainDoc",
@@ -68,7 +69,7 @@ export default function HomePage() {
       />
 
       {/* ── Hero ── */}
-      <section className="bg-gradient-to-b from-indigo-50 to-white py-16 sm:py-24 px-4">
+      <section id="explain-tool" className="bg-gradient-to-b from-indigo-50 to-white py-16 sm:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
             <Zap className="w-3.5 h-3.5" aria-hidden="true" />

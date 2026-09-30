@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import JsonLd, { buildFaqSchema, buildBreadcrumbSchema } from "@/components/JsonLd";
+import JsonLd, { buildFaqSchema, buildBreadcrumbSchema, buildDefinedTermSchema } from "@/components/JsonLd";
 import { getGlossaryTerm, getAllGlossaryTermSlugs, glossaryTerms } from "@/lib/glossaryTerms";
 import { documentTypes } from "@/lib/documentTypes";
 import { ChevronRight } from "lucide-react";
@@ -87,6 +87,7 @@ export default async function GlossaryTermPage({
             { name: "Legal Glossary", url: `${SITE_URL}/glossary` },
             { name: t.term, url: pageUrl },
           ]),
+          buildDefinedTermSchema(t, pageUrl, SITE_URL),
           buildFaqSchema(termFaq),
         ]}
       />

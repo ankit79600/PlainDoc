@@ -63,9 +63,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
+  // canonical is set per-page, not globally — a global canonical pointing to
+  // SITE_URL would assign the homepage URL to every page that doesn't override it.
   verification: {
     google: "YCOsLC5SEvGxv3F4MWZZM9fWlR7x1l0993hddf4tNkU",
   },

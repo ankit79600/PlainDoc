@@ -88,7 +88,7 @@ export default async function DocumentTypePage({
           <ol className="flex items-center gap-1 text-sm text-gray-500">
             <li><Link href="/" className="hover:text-indigo-600 transition-colors">Home</Link></li>
             <li><ChevronRight className="w-4 h-4" aria-hidden="true" /></li>
-            <li><span className="text-gray-400">Document Types</span></li>
+            <li><Link href="/explain" className="hover:text-indigo-600 transition-colors">Document Types</Link></li>
             <li><ChevronRight className="w-4 h-4" aria-hidden="true" /></li>
             <li className="text-gray-900 font-medium" aria-current="page">{doc.name}</li>
           </ol>
@@ -96,7 +96,7 @@ export default async function DocumentTypePage({
       </nav>
 
       {/* ── Hero / Tool section ── */}
-      <section className="bg-gradient-to-b from-indigo-50 to-white py-12 sm:py-16 px-4">
+      <section id="explain-tool" className="bg-gradient-to-b from-indigo-50 to-white py-12 sm:py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-5xl mb-4 block" aria-hidden="true">{doc.emoji}</span>
