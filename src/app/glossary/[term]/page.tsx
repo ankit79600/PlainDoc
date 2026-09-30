@@ -6,7 +6,7 @@ import { getGlossaryTerm, getAllGlossaryTermSlugs, glossaryTerms } from "@/lib/g
 import { documentTypes } from "@/lib/documentTypes";
 import { ChevronRight } from "lucide-react";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 // ── Static params ─────────────────────────────────────────────
 export function generateStaticParams() {

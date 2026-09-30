@@ -7,7 +7,7 @@ import { getDocumentType, getAllDocumentTypeSlugs, documentTypes } from "@/lib/d
 import { glossaryTerms } from "@/lib/glossaryTerms";
 import { ChevronRight, BookOpen } from "lucide-react";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 // ── Static path generation ────────────────────────────────────
 export function generateStaticParams() {

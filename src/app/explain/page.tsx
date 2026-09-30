@@ -4,7 +4,7 @@ import JsonLd, { buildBreadcrumbSchema } from "@/components/JsonLd";
 import { documentTypes } from "@/lib/documentTypes";
 import { ChevronRight, FileText } from "lucide-react";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const PAGE_URL = `${SITE_URL}/explain`;
 
 export const metadata: Metadata = {

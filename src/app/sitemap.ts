@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllDocumentTypeSlugs } from "@/lib/documentTypes";
 import { getAllGlossaryTermSlugs } from "@/lib/glossaryTerms";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 // Static dates reflecting the last significant content update.
 // Using new Date() would mislead crawlers into thinking content changes on every build.

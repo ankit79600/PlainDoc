@@ -3,7 +3,7 @@ import Link from "next/link";
 import JsonLd, { buildBreadcrumbSchema } from "@/components/JsonLd";
 import { FileText } from "lucide-react";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const PAGE_URL = `${SITE_URL}/about`;
 
 export const metadata: Metadata = {

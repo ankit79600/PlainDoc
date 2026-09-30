@@ -6,7 +6,7 @@ import { documentTypes } from "@/lib/documentTypes";
 import { glossaryTerms } from "@/lib/glossaryTerms";
 import { Shield, Zap, Lock, CheckCircle } from "lucide-react";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://plaindoc.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: { absolute: "PlainDoc — Explain Any Legal Document in Plain English" },
